@@ -20,4 +20,20 @@ double k2 = Convert.ToDouble(Console.ReadLine());
 double x = (b2 - b1) / (k1 - k2);
 double y = k2 * x + b2;
 
-Console.WriteLine($"Координаты точки пересечения двух прямых: x = {x}, y = {y}");
+void ValidateLines()
+{
+    if (k1 == k2)
+    {
+        Console.WriteLine("Прямые совпадают");
+    }
+    else if (b1 == b2)
+    {
+        Console.WriteLine("Прямые параллельны");
+    }
+    else
+    {
+        Console.WriteLine($"Координаты точки пересечения двух прямых: x = {x}, y = {y}");
+    }
+}
+
+ValidateLines();
