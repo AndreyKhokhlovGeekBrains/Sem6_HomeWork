@@ -20,7 +20,7 @@ double[] ConvertStringToNumbers(string[] array)
 
     for (int i = 0; i < array.Length; i++)
     {
-        if(double.TryParse(array[i], out double result)) newArray[i] = result;
+        if (double.TryParse(array[i], out double result)) newArray[i] = result;
     }
     return newArray;
 }
@@ -28,9 +28,9 @@ double[] ConvertStringToNumbers(string[] array)
 int CountPositiveNumbers(double[] array)
 {
     int count = 0;
-    for (int i = 0; i < array.Length; i++)
+    foreach (double item in array)
     {
-        if (array[i] > 0) count++;
+        if (item > 0) count++;
     }
     return count;
 }
